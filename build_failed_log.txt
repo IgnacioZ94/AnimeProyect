@@ -1,0 +1,17 @@
+Versión de MSBuild 17.8.3+195e7f5a3 para .NET
+  Determinando los proyectos que se van a restaurar...
+C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj : error NU1107: Se detectó un conflicto de versiones para AutoMapper. Para resolver este problema, instale o haga referencia a AutoMapper 16.0.0 directamente en el proyecto Presentation.API.  [C:\Users\f16556\Desktop\p\MyProject.sln]
+C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj : error NU1107:  Presentation.API -> Domain.Core -> AutoMapper (>= 16.0.0)  [C:\Users\f16556\Desktop\p\MyProject.sln]
+C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj : error NU1107:  Presentation.API -> AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 -> AutoMapper (= 12.0.1). [C:\Users\f16556\Desktop\p\MyProject.sln]
+  No se pudo restaurar C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj (en 617 ms).
+  3 de 4 proyectos están actualizados para la restauración.
+
+ERROR al compilar.
+
+C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj : error NU1107: Se detectó un conflicto de versiones para AutoMapper. Para resolver este problema, instale o haga referencia a AutoMapper 16.0.0 directamente en el proyecto Presentation.API.  [C:\Users\f16556\Desktop\p\MyProject.sln]
+C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj : error NU1107:  Presentation.API -> Domain.Core -> AutoMapper (>= 16.0.0)  [C:\Users\f16556\Desktop\p\MyProject.sln]
+C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj : error NU1107:  Presentation.API -> AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 -> AutoMapper (= 12.0.1). [C:\Users\f16556\Desktop\p\MyProject.sln]
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:02.48

@@ -1,0 +1,15 @@
+Versión de MSBuild 17.8.3+195e7f5a3 para .NET
+  Determinando los proyectos que se van a restaurar...
+  Todos los proyectos están actualizados para la restauración.
+  Entities -> C:\Users\f16556\Desktop\p\Entities\bin\Debug\net8.0\Entities.dll
+  Domain.Core -> C:\Users\f16556\Desktop\p\Domain.Core\bin\Debug\net8.0\Domain.Core.dll
+  Infrastructure -> C:\Users\f16556\Desktop\p\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\f16556\Desktop\p\Presentation.API\Program.cs(25,32): error CS1503: Argumento 2: no se puede convertir de 'System.Reflection.Assembly[]' a 'System.Action<AutoMapper.IMapperConfigurationExpression>' [C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj]
+
+ERROR al compilar.
+
+C:\Users\f16556\Desktop\p\Presentation.API\Program.cs(25,32): error CS1503: Argumento 2: no se puede convertir de 'System.Reflection.Assembly[]' a 'System.Action<AutoMapper.IMapperConfigurationExpression>' [C:\Users\f16556\Desktop\p\Presentation.API\Presentation.API.csproj]
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:02.69

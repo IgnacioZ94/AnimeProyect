@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aboMVYFXdUj0HrVFhXKDPyc8qCnfFJWbRIgXQ/xMKlj8sTc7H5u7OwewDFn2xgtQnzbXjgxMbYPoRVVTo8ef5g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\f16556\\Desktop\\Api\\AnimeProyect\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\f16556\\.nuget\\packages\\mongodb.bson\\3.6.0\\mongodb.bson.3.6.0.nupkg.sha512",
+    "C:\\Users\\f16556\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\f16556\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

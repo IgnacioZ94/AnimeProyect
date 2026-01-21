@@ -1,0 +1,16 @@
+Versión de MSBuild 17.8.3+195e7f5a3 para .NET
+  Determinando los proyectos que se van a restaurar...
+  Todos los proyectos están actualizados para la restauración.
+  Entities -> C:\Users\f16556\Desktop\p\Entities\bin\Debug\net8.0\Entities.dll
+  Domain.Core -> C:\Users\f16556\Desktop\p\Domain.Core\bin\Debug\net8.0\Domain.Core.dll
+C:\Users\f16556\Desktop\p\Infrastructure\Data\MongoDbContext.cs(1,28): error CS0234: El tipo o el nombre del espacio de nombres 'Configuration' no existe en el espacio de nombres 'Microsoft.Extensions' (¿falta alguna referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Infrastructure\Infrastructure.csproj]
+C:\Users\f16556\Desktop\p\Infrastructure\Data\MongoDbContext.cs(10,31): error CS0246: El nombre del tipo o del espacio de nombres 'IConfiguration' no se encontró (¿falta una directiva using o una referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Infrastructure\Infrastructure.csproj]
+
+ERROR al compilar.
+
+C:\Users\f16556\Desktop\p\Infrastructure\Data\MongoDbContext.cs(1,28): error CS0234: El tipo o el nombre del espacio de nombres 'Configuration' no existe en el espacio de nombres 'Microsoft.Extensions' (¿falta alguna referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Infrastructure\Infrastructure.csproj]
+C:\Users\f16556\Desktop\p\Infrastructure\Data\MongoDbContext.cs(10,31): error CS0246: El nombre del tipo o del espacio de nombres 'IConfiguration' no se encontró (¿falta una directiva using o una referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Infrastructure\Infrastructure.csproj]
+    0 Advertencia(s)
+    2 Errores
+
+Tiempo transcurrido 00:00:01.21

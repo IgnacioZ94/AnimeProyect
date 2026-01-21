@@ -1,0 +1,16 @@
+Versión de MSBuild 17.8.3+195e7f5a3 para .NET
+  Determinando los proyectos que se van a restaurar...
+  Todos los proyectos están actualizados para la restauración.
+C:\Users\f16556\Desktop\p\Entities\Product.cs(5,10): error CS0246: El nombre del tipo o del espacio de nombres 'BsonGuidRepresentationAttribute' no se encontró (¿falta una directiva using o una referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Entities\Entities.csproj]
+C:\Users\f16556\Desktop\p\Entities\Product.cs(5,10): error CS0246: El nombre del tipo o del espacio de nombres 'BsonGuidRepresentation' no se encontró (¿falta una directiva using o una referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Entities\Entities.csproj]
+C:\Users\f16556\Desktop\p\Entities\Product.cs(5,33): error CS0103: El nombre 'GuidRepresentation' no existe en el contexto actual [C:\Users\f16556\Desktop\p\Entities\Entities.csproj]
+
+ERROR al compilar.
+
+C:\Users\f16556\Desktop\p\Entities\Product.cs(5,10): error CS0246: El nombre del tipo o del espacio de nombres 'BsonGuidRepresentationAttribute' no se encontró (¿falta una directiva using o una referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Entities\Entities.csproj]
+C:\Users\f16556\Desktop\p\Entities\Product.cs(5,10): error CS0246: El nombre del tipo o del espacio de nombres 'BsonGuidRepresentation' no se encontró (¿falta una directiva using o una referencia de ensamblado?) [C:\Users\f16556\Desktop\p\Entities\Entities.csproj]
+C:\Users\f16556\Desktop\p\Entities\Product.cs(5,33): error CS0103: El nombre 'GuidRepresentation' no existe en el contexto actual [C:\Users\f16556\Desktop\p\Entities\Entities.csproj]
+    0 Advertencia(s)
+    3 Errores
+
+Tiempo transcurrido 00:00:01.97
