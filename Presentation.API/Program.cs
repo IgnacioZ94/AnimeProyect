@@ -1,3 +1,4 @@
+using Domain.Core.Configuration;
 using Domain.Core.Interfaces;
 using Domain.Core.Services;
 using Infrastructure.Services;
@@ -11,16 +12,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+// Configuration
+builder.Services.Configure<JikanApiSettings>(
+    builder.Configuration.GetSection("JikanApi"));
+
 // MongoDB Context
 builder.Services.AddSingleton<MongoDbContext>();
 
 // Repositories
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-// You can register generic repository if needed, but usually specific ones are better for DI injection matching
-// builder.Services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+builder.Services.AddScoped<ICatalogRepository, CatalogRepository>();
 
 // Services
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICatalogService, CatalogService>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

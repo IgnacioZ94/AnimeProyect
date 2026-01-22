@@ -8,8 +8,7 @@ namespace Domain.Core.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<ProductRequest, Product>();
-            // Add other mappings here if needed
+            CreateMap<CatalogRequest, Catalog>();
         }
     }
 }

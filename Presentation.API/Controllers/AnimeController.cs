@@ -32,4 +32,13 @@ public class AnimeController : ControllerBase
         var result = await _animeService.SearchAnimeAsync(query);
         return Ok(result);
     }
+
+    [HttpGet("catalog")]
+    public async Task<ActionResult<List<AnimeInfo>>> GetAnimeCatalog(
+        [FromQuery] string? q = null, 
+        [FromQuery] bool? sfw = null)
+    {
+        var result = await _animeService.GetAnimeByCatalogAsync(q, sfw);
+        return Ok(result);
+    }
 }
