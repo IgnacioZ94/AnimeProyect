@@ -1,5 +1,6 @@
 using Domain.Core.Interfaces;
 using Domain.Core.Services;
+using Infrastructure.Services;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -23,6 +24,9 @@ builder.Services.AddScoped<IProductService, ProductService>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+// HttpClient for Jikan
+builder.Services.AddHttpClient<IAnimeService, JikanAnimeService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

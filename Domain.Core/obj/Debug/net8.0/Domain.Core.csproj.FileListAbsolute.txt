@@ -28,3 +28,4 @@ C:\Users\f16556\Desktop\Api\AnimeProyect\Domain.Core\obj\Debug\net8.0\Domain.Cor
 C:\Users\f16556\Desktop\Api\AnimeProyect\Domain.Core\obj\Debug\net8.0\refint\Domain.Core.dll
 C:\Users\f16556\Desktop\Api\AnimeProyect\Domain.Core\obj\Debug\net8.0\Domain.Core.pdb
 C:\Users\f16556\Desktop\Api\AnimeProyect\Domain.Core\obj\Debug\net8.0\ref\Domain.Core.dll
+c:\Users\f16556\Desktop\Api\AnimeProyect\Domain.Core\obj\Debug\net8.0\Domain.Core.sourcelink.json

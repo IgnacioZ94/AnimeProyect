@@ -22,3 +22,4 @@ C:\Users\f16556\Desktop\Api\AnimeProyect\Entities\obj\Debug\net8.0\Entities.dll
 C:\Users\f16556\Desktop\Api\AnimeProyect\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\f16556\Desktop\Api\AnimeProyect\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Users\f16556\Desktop\Api\AnimeProyect\Entities\obj\Debug\net8.0\ref\Entities.dll
+c:\Users\f16556\Desktop\Api\AnimeProyect\Entities\obj\Debug\net8.0\Entities.sourcelink.json

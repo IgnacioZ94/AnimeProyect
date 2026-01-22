@@ -100,3 +100,4 @@ C:\Users\f16556\Desktop\Api\AnimeProyect\Presentation.API\obj\Debug\net8.0\refin
 C:\Users\f16556\Desktop\Api\AnimeProyect\Presentation.API\obj\Debug\net8.0\Presentation.API.pdb
 C:\Users\f16556\Desktop\Api\AnimeProyect\Presentation.API\obj\Debug\net8.0\Presentation.API.genruntimeconfig.cache
 C:\Users\f16556\Desktop\Api\AnimeProyect\Presentation.API\obj\Debug\net8.0\ref\Presentation.API.dll
+c:\Users\f16556\Desktop\Api\AnimeProyect\Presentation.API\obj\Debug\net8.0\Presentation.API.sourcelink.json
