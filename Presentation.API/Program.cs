@@ -20,11 +20,9 @@ builder.Services.Configure<JikanApiSettings>(
 builder.Services.AddSingleton<MongoDbContext>();
 
 // Repositories
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICatalogRepository, CatalogRepository>();
 
 // Services
-builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICatalogService, CatalogService>();
 
 // AutoMapper
