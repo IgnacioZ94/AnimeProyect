@@ -41,4 +41,14 @@ public class AnimeController : ControllerBase
         var result = await _animeService.GetAnimeByCatalogAsync(q, sfw);
         return Ok(result);
     }
+    [HttpGet("{id}")]
+    public async Task<ActionResult<AnimeInfo>> GetAnimeById(int id)
+    {
+        var result = await _animeService.GetAnimeByIdAsync(id);
+        if (result == null)
+        {
+            return NotFound();
+        }
+        return Ok(result);
+    }
 }

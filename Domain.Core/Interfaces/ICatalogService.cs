@@ -7,8 +7,8 @@ namespace Domain.Core.Interfaces
 {
     public interface ICatalogService
     {
-        Task<IEnumerable<Catalog>> GetCatalogsAsync();
-        Task<Catalog> GetCatalogAsync(string id);
+        Task<IEnumerable<CatalogResponse>> GetCatalogsAsync(string? query = null);
+        Task<Catalog?> GetCatalogAsync(string id);
         Task CreateCatalogAsync(CatalogRequest catalogRequest);
         Task UpdateCatalogAsync(string id, CatalogRequest catalogRequest);
         Task DeleteCatalogAsync(string id);

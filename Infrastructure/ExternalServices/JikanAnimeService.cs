@@ -137,4 +137,34 @@ public class JikanAnimeService : IAnimeService
             return new List<AnimeInfo>();
         }
     }
+    public async Task<AnimeInfo?> GetAnimeByIdAsync(int id)
+    {
+        try
+        {
+            var url = $"{_jikanSettings.BaseUrl}/anime/{id}";
+            _logger.LogInformation("Fetching anime details from Jikan API: {Url}", url);
+            
+            var response = await _httpClient.GetFromJsonAsync<SingleJikanResponse>(url);
+            
+            if (response?.Data == null)
+            {
+                _logger.LogWarning("Jikan API returned null data for anime ID: {Id}", id);
+                return null;
+            }
+
+            var result = _mapper.Map<AnimeInfo>(response.Data);
+            _logger.LogInformation("Successfully fetched details for anime ID: {Id}", id);
+            return result;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "HTTP error occurred while fetching anime ID: {Id}", id);
+            return null;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Unexpected error occurred while fetching anime ID: {Id}", id);
+            return null;
+        }
+    }
 }

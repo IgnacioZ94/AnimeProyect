@@ -7,4 +7,6 @@ public class AnimeInfo
     public string? Synopsis { get; set; }
     public string? ImageUrl { get; set; }
     public double? Score { get; set; }
+    public string? TrailerUrl { get; set; }
+    public string? Rating { get; set; }
 }

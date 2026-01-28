@@ -20,14 +20,14 @@ namespace Presentation.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Catalog>>> Get()
+        public async Task<ActionResult<IEnumerable<CatalogResponse>>> Get([FromQuery] string? q = null)
         {
-            var catalogs = await _catalogService.GetCatalogsAsync();
+            var catalogs = await _catalogService.GetCatalogsAsync(q);
             return Ok(catalogs);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Catalog>> Get(string id)
+        public async Task<ActionResult<Catalog>> GetById(string id)
         {
             var catalog = await _catalogService.GetCatalogAsync(id);
             if (catalog == null)

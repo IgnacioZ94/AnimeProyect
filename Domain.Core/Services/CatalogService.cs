@@ -14,25 +14,65 @@ namespace Domain.Core.Services
         private readonly ICatalogRepository _catalogRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<CatalogService> _logger;
+        private readonly IAnimeService _animeService;
 
         public CatalogService(
             ICatalogRepository catalogRepository, 
             IMapper mapper,
-            ILogger<CatalogService> logger)
+            ILogger<CatalogService> logger,
+            IAnimeService animeService)
         {
             _catalogRepository = catalogRepository;
             _mapper = mapper;
             _logger = logger;
+            _animeService = animeService;
         }
 
-        public async Task<IEnumerable<Catalog>> GetCatalogsAsync()
+        public async Task<IEnumerable<CatalogResponse>> GetCatalogsAsync(string? query = null)
         {
-            _logger.LogInformation("Fetching all catalogs");
+            _logger.LogInformation("Fetching catalogs with query: {Query}", query);
             try
             {
                 var catalogs = await _catalogRepository.GetAllAsync();
-                _logger.LogInformation("Successfully fetched all catalogs");
-                return catalogs;
+
+                if (!string.IsNullOrWhiteSpace(query))
+                {
+                    catalogs = catalogs.Where(c => c.Name.Contains(query, StringComparison.OrdinalIgnoreCase));
+                }
+                
+                var responseList = new List<CatalogResponse>();
+
+                foreach (var catalog in catalogs)
+                {
+                    string imageUrl = string.Empty;
+                    int animeId = 0;
+                    try 
+                    {
+                         var searchResult = await _animeService.SearchAnimeAsync(catalog.Name);
+                         var firstMatch = searchResult.FirstOrDefault();
+                         if (firstMatch != null)
+                         {
+                             imageUrl = firstMatch.ImageUrl ?? string.Empty;
+                             animeId = firstMatch.Id;
+                         }
+                    }
+                    catch(Exception ex)
+                    {
+                        _logger.LogWarning(ex, "Failed to fetch image for catalog {CatalogName}", catalog.Name);
+                    }
+
+                    responseList.Add(new CatalogResponse
+                    {
+                        OperationId = catalog.OperationId,
+                        Name = catalog.Name,
+                        Description = catalog.Description,
+                        ImageUrl = imageUrl,
+                        AnimeId = animeId
+                    });
+                }
+
+                _logger.LogInformation("Successfully fetched and enriched {Count} catalogs", responseList.Count);
+                return responseList;
             }
             catch (Exception ex)
             {
@@ -41,7 +81,7 @@ namespace Domain.Core.Services
             }
         }
 
-        public async Task<Catalog> GetCatalogAsync(string id)
+        public async Task<Catalog?> GetCatalogAsync(string id)
         {
             _logger.LogInformation("Fetching catalog with ID: {CatalogId}", id);
             try

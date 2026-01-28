@@ -18,5 +18,11 @@ namespace Infrastructure.Models.Jikan
         
         [JsonPropertyName("images")]
         public JikanImages? Images { get; set; }
+
+        [JsonPropertyName("rating")]
+        public string? Rating { get; set; }
+
+        [JsonPropertyName("trailer")]
+        public JikanTrailer? Trailer { get; set; }
     }
 }
